@@ -1,0 +1,13 @@
+library("RFinanceYJ")
+
+gree <- quoteStockTsData(x='3632.t',since='2012-01-04')
+dena <- quoteStockTsData(x='2432.t',since='2012-01-04')
+
+head(gree,n=5)
+head(dena,n=5)
+
+plot(gree[,"date"],gree[,"close"])
+plot(dena[,"date"],dena[,"close"])
+
+plot(gree[,"date"],gree[,"close"]/gree[1,c("close")])
+plot(dena[,"date"],dena[,"close"]/dena[1,c("close")])
